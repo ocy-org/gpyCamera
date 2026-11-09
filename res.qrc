@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/index">
+        <file>img/savefile.png</file>
+        <file>img/add.png</file>
+        <file>img/delete.png</file>
+        <file>img/edit.png</file>
+        <file>img/logo.png</file>
+        <file>img/default.png</file>
+        <file>img/gpy_default.ico</file>
+        <file>img/left.png</file>
+        <file>img/right.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,623 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1522</width>
+    <height>798</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="controlGroup">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>791</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>摄像头控制</string>
+    </property>
+    <widget class="QLabel" name="cameraLabel">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>51</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>摄像头:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="resolutionLabel">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>51</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>分辨率:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="cameraComboBox">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>20</y>
+       <width>311</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid #000000;  /* 设置边框为2px黑色实线 */
+border-radius: 5px;         /* 设置圆角边框 */</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="resolutionComboBox">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>60</y>
+       <width>311</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid #000000;  /* 设置边框为2px黑色实线 */
+border-radius: 5px;         /* 设置圆角边框 */</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="cameraToggleButton">
+     <property name="geometry">
+      <rect>
+       <x>400</x>
+       <y>20</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid #000000;  /* 设置边框为2px黑色实线 */
+border-radius: 5px;         /* 设置圆角边框 */</string>
+     </property>
+     <property name="text">
+      <string>开启摄像头</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="captureBtn">
+     <property name="geometry">
+      <rect>
+       <x>520</x>
+       <y>20</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid #000000;  /* 设置边框为2px黑色实线 */
+border-radius: 5px;         /* 设置圆角边框 */</string>
+     </property>
+     <property name="text">
+      <string>拍 照[回车]</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="changecameraButton">
+     <property name="geometry">
+      <rect>
+       <x>400</x>
+       <y>60</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid #000000;  /* 设置边框为2px黑色实线 */
+border-radius: 5px;         /* 设置圆角边框 */</string>
+     </property>
+     <property name="text">
+      <string>切换摄像头</string>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="cropGroup">
+     <property name="geometry">
+      <rect>
+       <x>639</x>
+       <y>10</y>
+       <width>141</width>
+       <height>80</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>轮廓裁边</string>
+     </property>
+     <widget class="QRadioButton" name="radioAutoCrop">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>20</y>
+        <width>91</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>自动裁边</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioManualCrop">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>50</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>手动裁边</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="delaycaptureBtn">
+     <property name="geometry">
+      <rect>
+       <x>520</x>
+       <y>60</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid #000000;  /* 设置边框为2px黑色实线 */
+border-radius: 5px;         /* 设置圆角边框 */</string>
+     </property>
+     <property name="text">
+      <string>延时5秒拍照</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>20</y>
+      <width>20</width>
+      <height>701</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="videoGroup">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>120</y>
+      <width>791</width>
+      <height>561</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>视频预览</string>
+    </property>
+    <widget class="VideoGLWidget" name="videoLabel">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>771</width>
+       <height>531</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid gray;  /* 设置边框为2px黑色实线 */
+padding: 5px;               /* 设置内边距 */
+border-radius: 5px;         /* 设置圆角边框 */
+background-color: black;</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="fpsLabel">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>690</y>
+      <width>371</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>FPS: 0.00 | 状态: 就绪</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="statusLabel">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>690</y>
+      <width>171</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="saveGroup">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>10</y>
+      <width>691</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>图片生成PDF</string>
+    </property>
+    <widget class="QPushButton" name="generatePdfButton">
+     <property name="geometry">
+      <rect>
+       <x>400</x>
+       <y>20</y>
+       <width>111</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid #000000;  /* 设置边框为2px黑色实线 */
+border-radius: 5px;         /* 设置圆角边框 */</string>
+     </property>
+     <property name="text">
+      <string>保存为一个PDF</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="generatemorePdfButton">
+     <property name="geometry">
+      <rect>
+       <x>530</x>
+       <y>20</y>
+       <width>111</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid #000000;  /* 设置边框为2px黑色实线 */
+border-radius: 5px;         /* 设置圆角边框 */</string>
+     </property>
+     <property name="text">
+      <string>保存为多个PDF</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="generateIamgeButton">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>20</y>
+       <width>111</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid #000000;  /* 设置边框为2px黑色实线 */
+border-radius: 5px;         /* 设置圆角边框 */</string>
+     </property>
+     <property name="text">
+      <string>保存为多个图片</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="clearButton">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>20</y>
+       <width>81</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid #000000;  /* 设置边框为2px黑色实线 */
+border-radius: 5px;         /* 设置圆角边框 */</string>
+     </property>
+     <property name="text">
+      <string>清空图片</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_filesavepath">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>0</y>
+       <width>411</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <underline>true</underline>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel { color: blue; }</string>
+     </property>
+     <property name="text">
+      <string>文件路径</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>0</y>
+       <width>72</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>保存位置:</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="generateOneIamgeButton">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>20</y>
+       <width>121</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid #000000;  /* 设置边框为2px黑色实线 */
+border-radius: 5px;         /* 设置圆角边框 */</string>
+     </property>
+     <property name="text">
+      <string>保存为一个图片</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="imgGroup">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>120</y>
+      <width>691</width>
+      <height>611</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>拍照图片预览(支持拖拽桌面的图片到此预览框中)</string>
+    </property>
+    <widget class="ImageListWidget" name="imageListWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>671</width>
+       <height>581</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 2px solid #000000;  /* 设置边框为2px黑色实线 */
+padding: 5px;               /* 设置内边距 */
+border-radius: 5px;         /* 设置圆角边框 */</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_version">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>690</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>v1.2</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_cameraconf">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>8</y>
+      <width>121</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>50</weight>
+      <bold>false</bold>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { color: blue; }</string>
+    </property>
+    <property name="text">
+     <string>主/副摄像头配置</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="turnrightButton">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>110</y>
+      <width>31</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>顺时针旋转90°</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: white;      /* 白色背景 */
+    border: 1px solid #1296db;       /* 蓝色边框 */
+    border-radius: 5px;           /* 圆角边框（可选） */
+    padding: 5px 10px;            /* 内边距（可选） */
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>img/right.png</normaloff>img/right.png</iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="turnleftButton">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>110</y>
+      <width>31</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>逆时针旋转90°</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: white;      /* 白色背景 */
+    border: 1px solid #1296db;       /* 蓝色边框 */
+    border-radius: 5px;           /* 圆角边框（可选） */
+    padding: 5px 10px;            /* 内边距（可选） */
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>img/left.png</normaloff>img/left.png</iconset>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1522</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="infomenu">
+    <property name="title">
+     <string>系统设置</string>
+    </property>
+    <addaction name="maininfoaction"/>
+    <addaction name="controlaction"/>
+    <addaction name="filesaveaction"/>
+    <addaction name="nameruleaction"/>
+    <addaction name="activationaction"/>
+    <addaction name="pdfconfaction"/>
+    <addaction name="separator"/>
+    <addaction name="helpdocaction"/>
+   </widget>
+   <addaction name="infomenu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="maininfoaction">
+   <property name="text">
+    <string>主/副摄像头配置</string>
+   </property>
+  </action>
+  <action name="filesaveaction">
+   <property name="text">
+    <string>文件保存路径</string>
+   </property>
+  </action>
+  <action name="savepdfaction">
+   <property name="text">
+    <string>文件保存路径</string>
+   </property>
+  </action>
+  <action name="activationaction_11">
+   <property name="text">
+    <string>激活工具</string>
+   </property>
+  </action>
+  <action name="aboataction">
+   <property name="text">
+    <string>关于</string>
+   </property>
+  </action>
+  <action name="activationaction">
+   <property name="text">
+    <string>授权激活</string>
+   </property>
+  </action>
+  <action name="aboutaction">
+   <property name="text">
+    <string>关于</string>
+   </property>
+  </action>
+  <action name="pdfconfaction">
+   <property name="text">
+    <string>图片合并设置</string>
+   </property>
+  </action>
+  <action name="helpdocaction">
+   <property name="text">
+    <string>功能介绍</string>
+   </property>
+  </action>
+  <action name="controlaction">
+   <property name="text">
+    <string>摄像头参数配置</string>
+   </property>
+  </action>
+  <action name="nameruleaction">
+   <property name="text">
+    <string>保存文件命名规则设置</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ImageListWidget</class>
+   <extends>QListWidget</extends>
+   <header>imagelistwidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>VideoGLWidget</class>
+   <extends>QLabel</extends>
+   <header location="global">videoglwidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
