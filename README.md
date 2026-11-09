@@ -22,7 +22,12 @@ sudo apt-get install v4l-utils
 这里要说明下，在windows下，打开摄像头设备是用DirectShow，在Linux下则是用v4l2
 # 功能说明
 ## 视频预览
-
+### 自动裁边
+<img width="769" height="661" alt="image" src="https://github.com/user-attachments/assets/951ee566-678a-494a-a568-b3f775b8f04a" />
+- OpenCV线程只负责图像处理：获取最大轮廓的物体，并且获取轮廓上四个能现成矩形的坐标；
+- OpenGL线程负责图像渲染，包括获取OpenCV线程推送过来的四个顶点坐标，通过MVP矩阵把矩形绘制出来。
+### 手动裁边
+  用户可以自己在屏幕上绘制矩形，点击【拍照】/【延时拍照】后，OpenCV线程根据坐标位置进行图片裁剪。
 ## 授权激活功能
 <img width="731" height="390" alt="8b888be7-8b9f-45fc-900c-06c2d059bf28" src="https://github.com/user-attachments/assets/43d7ee14-14d5-4e10-8e2b-2be671771346" />
 本项目包含的授权激活功能支持二维码拍照录入方式，适用于现场授权，当前版本的代码已把加/解密源码删除，可用自行下载第三方源码QT-AES来实现相关功能，维码拍照由ZXing完成，源码已集成到项目中，以下是QT-AES使用案例传送门：
