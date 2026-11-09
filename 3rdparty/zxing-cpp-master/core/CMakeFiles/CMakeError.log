@@ -1,0 +1,16 @@
+Performing C++ SOURCE FILE Test HAS_FILE_PREFIX_ARG failed with the following output:
+Change Dir: D:/software/otherdll/zxing-cpp-master/core/CMakeFiles/CMakeScratch/TryCompile-ivbwcp
+
+Run Build Command(s):D:/software/Qt5.12.10/Tools/mingw730_64/bin/mingw32-make.exe -f Makefile cmTC_92363/fast && D:/software/Qt5.12.10/Tools/mingw730_64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_92363.dir\build.make CMakeFiles/cmTC_92363.dir/build
+mingw32-make.exe[1]: Entering directory 'D:/software/otherdll/zxing-cpp-master/core/CMakeFiles/CMakeScratch/TryCompile-ivbwcp'
+Building CXX object CMakeFiles/cmTC_92363.dir/src.cxx.obj
+D:\software\Qt5.12.10\Tools\mingw730_64\bin\g++.exe -DHAS_FILE_PREFIX_ARG  -fmacro-prefix-map=D:/software/otherdll/zxing-cpp-master/core/= -o CMakeFiles\cmTC_92363.dir\src.cxx.obj -c D:\software\otherdll\zxing-cpp-master\core\CMakeFiles\CMakeScratch\TryCompile-ivbwcp\src.cxx
+g++.exe: error: unrecognized command line option '-fmacro-prefix-map=D:/software/otherdll/zxing-cpp-master/core/='
+mingw32-make.exe[1]: *** [CMakeFiles\cmTC_92363.dir\build.make:77: CMakeFiles/cmTC_92363.dir/src.cxx.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'D:/software/otherdll/zxing-cpp-master/core/CMakeFiles/CMakeScratch/TryCompile-ivbwcp'
+mingw32-make.exe: *** [Makefile:126: cmTC_92363/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+

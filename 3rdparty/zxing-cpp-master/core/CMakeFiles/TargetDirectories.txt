@@ -1,0 +1,7 @@
+D:/software/otherdll/zxing-cpp-master/core/CMakeFiles/ZXing.dir
+D:/software/otherdll/zxing-cpp-master/core/CMakeFiles/edit_cache.dir
+D:/software/otherdll/zxing-cpp-master/core/CMakeFiles/rebuild_cache.dir
+D:/software/otherdll/zxing-cpp-master/core/CMakeFiles/list_install_components.dir
+D:/software/otherdll/zxing-cpp-master/core/CMakeFiles/install.dir
+D:/software/otherdll/zxing-cpp-master/core/CMakeFiles/install/local.dir
+D:/software/otherdll/zxing-cpp-master/core/CMakeFiles/install/strip.dir
