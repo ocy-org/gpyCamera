@@ -24,9 +24,11 @@ sudo apt-get install v4l-utils
 以下仅列举核心的功能
 ## 视频预览
  ### 自动裁边
-<br><img width="769" height="661" alt="image" src="https://github.com/user-attachments/assets/951ee566-678a-494a-a568-b3f775b8f04a" />
+<br><img width="769" height="661" alt="image" src="https://github.com/user-attachments/assets/951ee566-678a-494a-a568-b3f775b8f04a" /><br>
 - OpenCV线程只负责图像处理：获取最大轮廓的物体，并且获取轮廓上四个能现成矩形的坐标；<br>
 - OpenGL线程负责图像渲染，包括获取OpenCV线程推送过来的四个顶点坐标，通过MVP矩阵把矩形绘制出来。<br>
+以下是详细讲解本项目高拍仪场景识别物体轮廓的博客<br>
+https://blog.csdn.net/liangyuna8787/article/details/154803655<br>
  ### 手动裁边
   用户可以自己在屏幕上绘制矩形，点击【拍照】/【延时拍照】后，OpenCV线程根据坐标位置进行图片裁剪。<br>
 注意：高拍仪是高清摄像头高曝光的场景，本项目进行了两项优化：（1）增加网格方式去除边缘的光噪；（2）高曝光下获取的轮廓四个点不一定刚好能形成矩形，需要判断并进一步拟合成矩形。
